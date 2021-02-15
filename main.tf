@@ -42,7 +42,8 @@ locals {
 }
 
 module "label" {
-  source = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
+  source  = "cloudposse/label/null"
+  version = "0.24.1" # requires Terraform >= 0.13.0
 
   # Using attributes = ["workers"] would put "workers" before any user-specified attributes.
   # While that might be preferable (adding an attribute "blue" would create
